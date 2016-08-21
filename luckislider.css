@@ -1,0 +1,70 @@
+._ls {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+._ls ._ls__prev, ._ls ._ls__next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 600ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: -20px 0 0 0;
+}
+
+._ls ._ls__prev:before, ._ls ._ls__next:before {
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    margin: 11px 0 0 7px;
+    border: 3px solid #444444;
+    border-top: none;
+    border-right: none;
+}
+
+._ls ._ls__next {
+    left: auto;
+    right: 0;
+}
+
+._ls ._ls__next:before {
+    margin: 11px 7px 0 0;
+    border: 3px solid #444444;
+    border-left: none;
+    border-bottom: none;
+}
+
+._ls ._ls__prev:hover, ._ls ._ls__next:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+._ls ._ls__prev._ls__disabled, ._ls ._ls__next._ls__disabled {
+    opacity: 0.5;
+    box-shadow: none;
+}
+
+._ls ._ls__item {
+    display: inline-block;
+    vertical-align: top;
+}
+
+._ls ._ls__dots ._ls__dots-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: green;
+}
+
+._ls ._ls__dots ._ls__dots-item._ls__active {
+    background: red;
+}
