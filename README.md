@@ -3,14 +3,17 @@ Simple slider on jQuery
 
 before init:
 
+```html
 <div>
   <div></div>
   <div></div>
   <div></div>
 </div>
+```
 
 after init:
 
+```html
 <div class="_ls">
   <div class="_ls__wrapper">
     <div class="_ls__list">
@@ -31,3 +34,4 @@ after init:
     <a class="_ls__dots-item" data-dot="3" href="javascript:void(0);"></a>
   </div>
 </div>
+```
