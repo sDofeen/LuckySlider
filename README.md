@@ -17,9 +17,9 @@ after init:
 <div class="_ls">
   <div class="_ls__wrapper">
     <div class="_ls__list">
-      <div class="item _ls__list-item" data-item="1"></div>
-      <div class="item _ls__list-item" data-item="2"></div>
-      <div class="item _ls__list-item" data-item="3"></div>
+      <div class="_ls__list-item" data-item="1"></div>
+      <div class="_ls__list-item" data-item="2"></div>
+      <div class="_ls__list-item" data-item="3"></div>
     </div>
   
     <div class="_ls__nav">
