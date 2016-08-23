@@ -1,5 +1,5 @@
 /**
- * LuckySlider v1.0
+ * LuckySlider v1.1
  * http://sdofeen.com
  *
  * Copyright 2016, sDofeen
@@ -24,15 +24,21 @@
                 active = settings.start,
                 items = $ls.children().length;
 
-            $ls.addClass('_ls').children().addClass('_ls__item').each(function(index, item) {
+            $ls.addClass('_ls').children().addClass('_ls__list-item').each(function(index, item) {
                 $(item).attr('data-item', Number(index + 1));
             });
 
-            if (settings.nav) {
-                $ls.append('<a class="_ls__prev" href="javascript:void(0);"></a>');
-                $ls.append('<a class="_ls__next" href="javascript:void(0);"></a>');
+            $ls.append('<div class="_ls__wrapper"></div>');
+            $ls.find('._ls__wrapper').append('<div class="_ls__list"></div>');
+            $ls.find('._ls__list-item').appendTo($ls.find('._ls__list'));
 
-                $ls.find('._ls__prev, ._ls__next').on('click', change);
+            if (settings.nav) {
+                $ls.find('._ls__wrapper').append('<div class="_ls__nav"></div>');
+
+                $ls.find('._ls__nav').append('<a class="_ls__nav-prev" href="javascript:void(0);"></a>');
+                $ls.find('._ls__nav').append('<a class="_ls__nav-next" href="javascript:void(0);"></a>');
+
+                $ls.find('._ls__nav ._ls__nav-prev, ._ls__nav ._ls__nav-next').on('click', change);
             }
 
             if (settings.dots) {
@@ -58,26 +64,26 @@
             }
 
             function setActive() {
-                $ls.find('._ls__item[data-item="' + active + '"]').addClass('_ls__active');
+                $ls.find('._ls__list-item[data-item="' + active + '"]').addClass('_ls-active');
 
                 if (settings.dots) {
-                    $ls.find('._ls__dots-item[data-dot="' + active + '"]').addClass('_ls__active');
+                    $ls.find('._ls__dots-item[data-dot="' + active + '"]').addClass('_ls-active');
                 }
             }
 
             function change() {
                 var $el = $(this),
-                    $items = $ls.children(),
+                    $items = $ls.find('._ls__list-item'),
                     $dots = $ls.find('._ls__dots-item'),
                     isDot = $el.hasClass('_ls__dots-item'),
-                    isPrev = $el.hasClass('_ls__prev');
+                    isPrev = $el.hasClass('_ls__nav-prev');
 
-                if ($el.hasClass('_ls__disabled') || $el.hasClass('_ls__active')) {
+                if ($el.hasClass('_ls-disabled') || $el.hasClass('_ls-active')) {
                     return false;
                 }
 
-                $items.removeClass('_ls__active');
-                $dots.removeClass('_ls__active');
+                $items.removeClass('_ls-active');
+                $dots.removeClass('_ls-active');
 
                 if (isDot) {
                     active = $el.data('dot');
@@ -107,15 +113,15 @@
             }
 
             function checkNav() {
-                $ls.find('._ls__prev').removeClass('_ls__disabled');
-                $ls.find('._ls__next').removeClass('_ls__disabled');
+                $ls.find('._ls__nav-prev').removeClass('_ls-disabled');
+                $ls.find('._ls__nav-next').removeClass('_ls-disabled');
 
                 if (active === 1) {
-                    $ls.find('._ls__prev').addClass('_ls__disabled');
+                    $ls.find('._ls__nav-prev').addClass('_ls-disabled');
                 }
 
                 if (active === items) {
-                    $ls.find('._ls__next').addClass('_ls__disabled');
+                    $ls.find('._ls__nav-next').addClass('_ls-disabled');
                 }
             }
         }
