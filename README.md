@@ -1,4 +1,4 @@
-# lucky-slider
+# luckyslider
 Simple slider on jQuery
 
 before init:
