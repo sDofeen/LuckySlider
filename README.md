@@ -35,3 +35,14 @@ after init:
   </div>
 </div>
 ```
+
+default settings
+
+```js
+    start: 1,
+    nav: true,
+    dots: true,
+    cycle: true,
+    auto: false,
+    timeout: 3000
+```
