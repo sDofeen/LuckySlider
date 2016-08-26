@@ -1,0 +1,15 @@
+{
+  "name": "luckyslider",
+  "version": "0.0.2",
+  "homepage": "https://github.com/sDofeen/luckyslider",
+  "authors": [
+    "sDofeen <sdofeen@gmail.com>"
+  ],
+  "description": "Simply jQuery slider",
+  "keywords": [
+    "jquery",
+    "slider",
+    "carousel"
+  ],
+  "license": "MIT"
+}
