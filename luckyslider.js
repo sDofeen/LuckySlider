@@ -1,12 +1,11 @@
 /**
- * LuckySlider v1.1
- * http://sdofeen.com
+ * luckyslider
  *
  * Copyright 2016, sDofeen
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  */
-;(function($) {
+(function($) {
     $.fn.luckySlider = function(options) {
         return this.each(function(index, item) {
             init($(item), options);
