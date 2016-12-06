@@ -19,12 +19,20 @@
 <script>
     $(function() {
         $('.element01').luckySlider();
+
         $('.element02').luckySlider({
             cycle: false
         });
+
         $('.element03').luckySlider({
             auto: true,
             timeout: 3000
+        });
+
+        $('.element04').luckySlider({
+            afterChange: function() {
+                $('.text04 .active').text($('.element04 ._ls__list ._ls-active').data('item'));
+            }
         });
     });
 </script>
@@ -72,6 +80,25 @@
     <img src="img/05.jpg" alt=""/>
     <img src="img/06.jpg" alt=""/>
 </div>
+
+<pre>
+    $('.element04').luckySlider({
+        afterChange: function() {
+            $('.text04 .active').text($('.element04 ._ls__list ._ls-active').data('item'));
+        }
+    });
+</pre>
+
+<div class="element04">
+    <img src="img/01.jpg" alt=""/>
+    <img src="img/02.jpg" alt=""/>
+    <img src="img/03.jpg" alt=""/>
+    <img src="img/04.jpg" alt=""/>
+    <img src="img/05.jpg" alt=""/>
+    <img src="img/06.jpg" alt=""/>
+</div>
+
+<div class="text04">Active item is: <span class="active">1</span></div>
 
 </body>
 </html>
