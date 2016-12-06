@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>LuckySlider - Simple and easy slider based on jQuery</title>
+
+    <link type="text/css" rel="stylesheet" href="css/luckyslider.css"/>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../luckyslider.js"></script>
+</head>
+
+<body>
+
+<script>
+    $(function() {
+        $('.element01').luckySlider();
+        $('.element02').luckySlider({
+            cycle: false
+        });
+        $('.element03').luckySlider({
+            auto: true,
+            timeout: 3000
+        });
+    });
+</script>
+
+<pre>
+    $('.element01').luckySlider();
+</pre>
+
+<div class="element01">
+    <img src="img/01.jpg" alt=""/>
+    <img src="img/02.jpg" alt=""/>
+    <img src="img/03.jpg" alt=""/>
+    <img src="img/04.jpg" alt=""/>
+    <img src="img/05.jpg" alt=""/>
+    <img src="img/06.jpg" alt=""/>
+</div>
+
+<pre>
+    $('.element02').luckySlider({
+        cycle: false
+    });
+</pre>
+
+<div class="element02">
+    <img src="img/01.jpg" alt=""/>
+    <img src="img/02.jpg" alt=""/>
+    <img src="img/03.jpg" alt=""/>
+    <img src="img/04.jpg" alt=""/>
+    <img src="img/05.jpg" alt=""/>
+    <img src="img/06.jpg" alt=""/>
+</div>
+
+<pre>
+    $('.element03').luckySlider({
+        auto: true,
+        timeout: 3000
+    });
+</pre>
+
+<div class="element03">
+    <img src="img/01.jpg" alt=""/>
+    <img src="img/02.jpg" alt=""/>
+    <img src="img/03.jpg" alt=""/>
+    <img src="img/04.jpg" alt=""/>
+    <img src="img/05.jpg" alt=""/>
+    <img src="img/06.jpg" alt=""/>
+</div>
+
+</body>
+</html>

@@ -5,11 +5,13 @@
   "authors": [
     "sDofeen <sdofeen@gmail.com>"
   ],
-  "description": "Simply jQuery slider",
+  "description": "Simple and easy slider based on jQuery",
   "keywords": [
     "jquery",
     "slider",
-    "carousel"
+    "carousel",
+    "swipe",
+    "gallery"
   ],
   "license": "MIT"
 }
