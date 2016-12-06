@@ -1,7 +1,41 @@
-# luckyslider
-Simple slider on jQuery
+# LuckySlider
+Simple and easy slider based on jQuery
 
-before init:
+Settings:
+
+```js
+    start: 1, // an element that will be active after initialization
+    nav: true, // show prev & next elements
+    dots: true, // show navigation
+    cycle: true, // cycle slider
+    auto: false, // auto change
+    timeout: 3000, // time for auto setting
+    beforeChange: function(){}, // custom function that is called before the change
+    afterChange: function(){}, // custom function that is called after the change
+```
+
+
+Example:
+
+```js
+$('.element').luckySlider({
+    start: 1,
+    nav: true,
+    dots: true,
+    cycle: true,
+    auto: false,
+    timeout: 3000,
+    beforeChange: function() {
+        console.log('Here you can use your function');
+    },
+    afterChange: function() {
+        console.log('Here you can use your function');
+    }
+});
+```
+
+
+HTML before init:
 
 ```html
 <div>
@@ -11,7 +45,8 @@ before init:
 </div>
 ```
 
-after init:
+
+HTML after init:
 
 ```html
 <div class="_ls">
@@ -34,15 +69,4 @@ after init:
     <a class="_ls__dots-item" data-dot="3" href="javascript:void(0);"></a>
   </div>
 </div>
-```
-
-default settings
-
-```js
-    start: 1,
-    nav: true,
-    dots: true,
-    cycle: true,
-    auto: false,
-    timeout: 3000
 ```
