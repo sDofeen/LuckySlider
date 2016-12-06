@@ -71,6 +71,10 @@
             }
 
             function change() {
+                if (settings.beforeChange && $.isFunction(settings.beforeChange)) {
+                    settings.beforeChange.call();
+                }
+
                 var $el = $(this),
                     $items = $ls.find('._ls__list-item'),
                     $dots = $ls.find('._ls__dots-item'),
@@ -108,6 +112,10 @@
 
                 if (!settings.cycle) {
                     checkNav();
+                }
+
+                if (settings.afterChange && $.isFunction(settings.afterChange)) {
+                    settings.afterChange.call();
                 }
             }
 
