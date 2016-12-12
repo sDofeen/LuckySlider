@@ -21,7 +21,7 @@ Methods:
 ```js
     prev() // it makes active the previous item
     next() // it makes active the next element
-    getActive // returns the currently active element
+    getActive() // returns the currently active element
     setActive(number) // sets the active element
 ```
 
