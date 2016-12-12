@@ -1,6 +1,7 @@
 # LuckySlider
 Simple and easy slider based on jQuery
 
+
 Settings:
 
 ```js
@@ -15,7 +16,17 @@ Settings:
 ```
 
 
-Example:
+Methods:
+
+```js
+    prev() // it makes active the previous item
+    next() // it makes active the next element
+    getActive // returns the currently active element
+    setActive(number) // sets the active element
+```
+
+
+Examples:
 
 ```js
 $('.element').luckySlider({
@@ -30,6 +41,12 @@ $('.element').luckySlider({
     },
     afterChange: function() {
         console.log('Here you can use your function');
+    }
+});
+
+var $el = $('.element02').luckySlider({
+    afterChange: function() {
+        console.log('Now active is: ' + $el.getActive());
     }
 });
 ```
