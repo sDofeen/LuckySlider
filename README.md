@@ -2,17 +2,18 @@
 Simple and easy slider based on jQuery
 
 
-Settings:
+Settings (default):
 
 ```js
-    start: 1, // an element that will be active after initialization
-    nav: true, // show prev & next navigation elements
-    dots: true, // show navigation dots
-    cycle: true, // cycle slider
-    auto: false, // auto change
-    timeout: 3000, // auto change timeout
-    beforeChange: function(){}, // custom function that is called before the change
-    afterChange: function(){}, // custom function that is called after the change
+    start: 1 // an element that will be active after initialization
+    nav: true // show prev & next navigation elements
+    dots: true // show navigation dots
+    cycle: true // cycle slider
+    swipe: true // if you are using jQuery Mobile - slider will react on the swipe
+    auto: false // auto change
+    timeout: 3000 // auto change timeout
+    beforeChange: function(){} // custom function that is called before the change
+    afterChange: function(){} // custom function that is called after the change
 ```
 
 
