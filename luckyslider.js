@@ -7,10 +7,16 @@
  */
 (function($) {
     $.fn.luckySlider = function(options) {
-        return init(this, options);
+        var _this = {};
+
+        this.each(function(index, item) {
+            _this = init($(item), options);
+        });
+
+        return _this;
 
         function init($ls, options) {
-            var luckyslider = {},
+            var luckySlider = {},
                 settings = $.extend({
                     start: 1,
                     nav: true,
@@ -153,25 +159,25 @@
 
             setActive();
 
-            luckyslider.getActive = function() {
+            luckySlider.getActive = function() {
                 return active;
             };
 
-            luckyslider.setActive = function(id) {
+            luckySlider.setActive = function(id) {
                 if ($.isNumeric(id)) {
                     change('id', id);
                 }
             };
 
-            luckyslider.prev = function() {
+            luckySlider.prev = function() {
                 change('prev');
             };
 
-            luckyslider.next = function() {
+            luckySlider.next = function() {
                 change('next');
             };
 
-            return luckyslider;
+            return luckySlider;
         }
     }
 })(jQuery);
