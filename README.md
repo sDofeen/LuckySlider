@@ -11,7 +11,7 @@ Settings (default):
     cycle: true // cycle slider
     swipe: true // if you are using jQuery Mobile slider will react on the swipe
     auto: false // auto change
-    timeout: 3000 // auto change timeout
+    timeout: 3000 // auto change interval
     beforeChange: function(){} // custom function that is called before the change
     afterChange: function(){} // custom function that is called after the change
 ```
